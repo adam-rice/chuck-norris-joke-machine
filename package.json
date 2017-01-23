@@ -1,0 +1,24 @@
+{
+  "name": "chuck-norris-joke-machine",
+  "version": "1.0.0",
+  "description": "an application built using react & react-router",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-rice/chuck-norris-joke-machine.git"
+  },
+  "keywords": [
+    "react",
+    "react-router",
+    "turing"
+  ],
+  "author": "adam rice",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adam-rice/chuck-norris-joke-machine/issues"
+  },
+  "homepage": "https://github.com/adam-rice/chuck-norris-joke-machine#readme"
+}
