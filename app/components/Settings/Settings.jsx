@@ -2,10 +2,10 @@
 
 import React from 'react';
 
-const Settings = (props) => {
+export const Settings = () => {
   return (
-    <button onClick={() => props.handleClick() }>Settings</button>
+    <div>
+      <p>Settings go here</p>
+    </div>
   );
 }
-
-export default Settings;
