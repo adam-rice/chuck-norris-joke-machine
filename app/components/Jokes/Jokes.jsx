@@ -3,12 +3,13 @@
 import React,{ Component } from 'react';
 import { Link } from 'react-router';
 import './jokes-style';
+import { Joke } from '../Joke/Joke';
 
 export default class Jokes extends Component {
   constructor() {
   super();
     this.state = {
-      jokes: 'CLICK GET JOKES!'
+      jokes: []
     };
   }
 
@@ -41,6 +42,7 @@ export default class Jokes extends Component {
   }
 
   render() {
+    const { jokes } = this.state;
     return (
       <div id="jokes">
         <p>{this.props.displayJoke}</p>
@@ -57,7 +59,12 @@ export default class Jokes extends Component {
           activeClassName="active"
           to="/favorites">Favorites
         </Link>
-        <p>list</p>
+        <div>
+          {jokes.map((card) =>
+          <div key={card.id}>
+            <Joke {...card} />
+          </div>)}
+        </div>
       </div>
     );
   }
