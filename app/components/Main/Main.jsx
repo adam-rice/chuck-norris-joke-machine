@@ -9,6 +9,9 @@ export default class Main extends Component {
     super();
     this.state = {
       displayJoke: null,
+      starredJokes: [],
+      parentalControls: false,
+      setName: null
     };
   }
 
