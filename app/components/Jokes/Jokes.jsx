@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 
 import React,{ Component } from 'react';
+import { Link } from 'react-router';
 import './jokes-style';
 
 export default class Jokes extends Component {
@@ -14,7 +15,20 @@ export default class Jokes extends Component {
   render() {
     return (
       <div>
-        <h3>Jokes go here</h3>
+        <p>Some default joke</p>
+        <form>
+          <button>New Jokes</button>
+          <input
+            ref="count"
+            type="number"
+            placeholder="5"
+          />
+        </form>
+        <Link
+          id="favoritesBtn"
+          activeClassName="active"
+          to="/favorites">Favorites
+        </Link>
       </div>
     );
   }
