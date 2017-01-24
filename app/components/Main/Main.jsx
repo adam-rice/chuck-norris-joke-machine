@@ -2,7 +2,6 @@
 
 import React,{ Component } from 'react';
 import './main-style';
-
 import { Header } from '../Header/Header';
 
 export default class Main extends Component {
