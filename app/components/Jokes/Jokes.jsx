@@ -41,13 +41,31 @@ export default class Jokes extends Component {
     this.refs.count.blur();
   }
 
+  renderCards() {
+    const { jokes } = this.state;
+    if (jokes.length === 0) {
+      return (
+        <p id="instructions">Click Get Jokes!</p>
+      );
+    } else {
+      return (
+        <div id="joke-list">
+          {jokes.map((card) =>
+          <div key={card.id}>
+            <Joke {...card} />
+          </div>)}
+        </div>
+      )
+    }
+  }
+
   render() {
     const { jokes } = this.state;
     return (
       <div id="jokes">
-        <p>{this.props.displayJoke}</p>
+        <p id="display-joke">{this.props.displayJoke}</p>
         <form onSubmit={this.onFormSubmit.bind(this)}>
-          <button>Get Jokes</button>
+          <button id="getJokesBtn">Get Jokes</button>
           <input
             ref="count"
             type="number"
@@ -60,12 +78,13 @@ export default class Jokes extends Component {
           to="/favorites">Favorites
         </Link>
         <div>
-          {jokes.map((card) =>
-          <div key={card.id}>
-            <Joke {...card} />
-          </div>)}
+          {this.renderCards()}
         </div>
       </div>
     );
   }
 }
+
+Jokes.propTypes = {
+  jokes: React.PropTypes.array
+};

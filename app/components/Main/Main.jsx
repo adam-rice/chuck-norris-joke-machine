@@ -9,6 +9,9 @@ export default class Main extends Component {
     super();
     this.state = {
       displayJoke: null,
+      starredJokes: [],
+      parentalControls: false,
+      setName: null
     };
   }
 
@@ -17,7 +20,6 @@ export default class Main extends Component {
     fetch(chuckData).then((response) => {
       return response.json();
     }).then((data) => {
-      console.log(data);
       this.setState({
         displayJoke: data.value[0].joke
       });
