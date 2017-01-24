@@ -41,6 +41,24 @@ export default class Jokes extends Component {
     this.refs.count.blur();
   }
 
+  renderCards() {
+    const { jokes } = this.state;
+    if (jokes.length === 0) {
+      return (
+        <p>Click Get Jokes!</p>
+      );
+    } else {
+      return (
+        <div>
+          {jokes.map((card) =>
+          <div key={card.id}>
+            <Joke {...card} />
+          </div>)}
+        </div>
+      )
+    }
+  }
+
   render() {
     const { jokes } = this.state;
     return (
@@ -59,12 +77,7 @@ export default class Jokes extends Component {
           activeClassName="active"
           to="/favorites">Favorites
         </Link>
-        <div>
-          {jokes.map((card) =>
-          <div key={card.id}>
-            <Joke {...card} />
-          </div>)}
-        </div>
+        {this.renderCards()}
       </div>
     );
   }
