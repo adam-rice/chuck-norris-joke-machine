@@ -43,7 +43,7 @@ export default class Jokes extends Component {
   render() {
     return (
       <div id="jokes">
-        <p>Some default joke</p>
+        <p>{this.props.displayJoke}</p>
         <form onSubmit={this.onFormSubmit.bind(this)}>
           <button>Get Jokes</button>
           <input

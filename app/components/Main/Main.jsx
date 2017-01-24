@@ -29,7 +29,7 @@ export default class Main extends Component {
     return (
       <div id="body">
         <Header/>
-        {this.props.children}
+        {React.cloneElement(this.props.children, {displayJoke: this.state.displayJoke})}
       </div>
     );
   }
