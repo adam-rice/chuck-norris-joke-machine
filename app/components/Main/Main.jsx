@@ -9,14 +9,19 @@ export default class Main extends Component {
   constructor() {
     super();
     this.state = {
-      jokes: [],
-      favJokes: []
+      displayJoke: null,
     };
   }
 
   componentDidMount() {
-    this.setState({
-      jokes: [1,2,3]
+    const chuckData = 'http://api.icndb.com/jokes/random/1?escape=javascript';
+    fetch(chuckData).then((response) => {
+      return response.json();
+    }).then((data) => {
+      console.log(data);
+      this.setState({
+        displayJoke: data.value[0].joke
+      });
     });
   }
 
