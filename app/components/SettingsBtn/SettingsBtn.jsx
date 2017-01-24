@@ -1,10 +1,17 @@
 /*jshint esversion: 6 */
 
 import React from 'react';
+import { Link } from 'react-router';
+import './settingsbtn-style';
+
 
 const SettingsBtn = (props) => {
   return (
-    <button onClick={() => props.handleClick() }>Settings</button>
+      <Link
+        id="settingsBtn"
+        activeClassName="active"
+        to="/settings">Settings
+      </Link>
   );
 }
 

@@ -2,18 +2,18 @@
 
 import React,{ Component } from 'react';
 
-export default class Jokes extends Component {
+export default class Favorites extends Component {
   constructor() {
   super();
     this.state = {
-      dance: false
+      walrus: false
     };
   }
 
   render() {
     return (
       <div>
-        <h3>Jokes go here</h3>
+        <h3>Favorites go here</h3>
       </div>
     );
   }
