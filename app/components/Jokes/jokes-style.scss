@@ -2,8 +2,21 @@
   text-align: center;
 }
 
+#display-joke {
+  border: 1px dotted white;
+  padding: 12px;
+  width: 80%;
+  margin: 10px auto;
+}
+
 form, p, button {
   margin: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
@@ -18,12 +31,43 @@ input::-webkit-inner-spin-button {
 }
 
 input {
-  width: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 30px;
+  height: 33px;
+  outline: none;
   text-align: center;
 }
 
+#getJokesBtn {
+  height: 40px;
+  width: 200px;
+}
+
 #favoritesBtn {
+  padding: 12px;
+}
+
+#favoritesBtn, #getJokesBtn {
   background-color: lightgrey;
-  text-decoration: none;
+  border-radius: 5px;
+  border: none;
   color: black;
+  font-size: 12px;
+  outline: none;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#instructions {
+  color: #7a8f98;
+  font-size: 40px;
+  margin: 60px;
+}
+
+#joke-list {
+  margin: 20px;
 }

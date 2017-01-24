@@ -8,7 +8,6 @@ export const SettingsBtn = (props) => {
   return (
       <Link
         id="settingsBtn"
-        activeClassName="active"
         to="/settings">Settings
       </Link>
   );

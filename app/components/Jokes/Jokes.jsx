@@ -45,11 +45,11 @@ export default class Jokes extends Component {
     const { jokes } = this.state;
     if (jokes.length === 0) {
       return (
-        <p>Click Get Jokes!</p>
+        <p id="instructions">Click Get Jokes!</p>
       );
     } else {
       return (
-        <div>
+        <div id="joke-list">
           {jokes.map((card) =>
           <div key={card.id}>
             <Joke {...card} />
@@ -63,9 +63,9 @@ export default class Jokes extends Component {
     const { jokes } = this.state;
     return (
       <div id="jokes">
-        <p>{this.props.displayJoke}</p>
+        <p id="display-joke">{this.props.displayJoke}</p>
         <form onSubmit={this.onFormSubmit.bind(this)}>
-          <button>Get Jokes</button>
+          <button id="getJokesBtn">Get Jokes</button>
           <input
             ref="count"
             type="number"
@@ -77,7 +77,9 @@ export default class Jokes extends Component {
           activeClassName="active"
           to="/favorites">Favorites
         </Link>
-        {this.renderCards()}
+        <div>
+          {this.renderCards()}
+        </div>
       </div>
     );
   }
