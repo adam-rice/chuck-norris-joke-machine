@@ -2,40 +2,49 @@
 
 import React,{ Component } from 'react';
 import { Link } from 'react-router';
-import chuckData from '../../API/chuck-database';
 import './jokes-style';
 
 export default class Jokes extends Component {
   constructor() {
   super();
     this.state = {
-      isLoading: false,
-      joke: 'CLICK GET JOKES!'
+      jokes: 'CLICK GET JOKES!'
     };
   }
 
   onFormSubmit(e) {
     e.preventDefault();
+    const count = this.refs.count.value;
+    const defaultChuckData =
+    'http://api.icndb.com/jokes/random/5?escape=javascript';
+    const definedChuckData = `http://api.icndb.com/jokes/random/${count}?escape=javasript`;
 
-    // this.setState({isLoading: true});
+    if(count === '') {
+      fetch(defaultChuckData).then((response) => {
+        return response.json();
+      }).then((data) => {
+        this.setState({
+          jokes: data.value
+        });
+      }); } else {
+        fetch(definedChuckData).then((response) => {
+        return response.json();
+      }).then((data) => {
+        this.setState({
+          jokes: data.value
+        });
+      });
+    }
 
-    chuckData.getJoke().then(function(response) {
-      console.log(response.data.value.joke);
-    });
-  //     this.setState({
-  //       joke: response.data.value.joke
-  //     });
-  //   },function (errorMessage) {
-  //     this.setState({isLoading: false});
-  //     alert(errorMessage);
-  //   });
+    this.refs.count.value = '';
+    this.refs.count.blur();
   }
 
   render() {
     return (
-      <div>
-        <p>Some default joke</p>
-        <form onSubmit={this.onFormSubmit}>
+      <div id="jokes">
+        <p>{this.props.displayJoke}</p>
+        <form onSubmit={this.onFormSubmit.bind(this)}>
           <button>Get Jokes</button>
           <input
             ref="count"
@@ -48,7 +57,7 @@ export default class Jokes extends Component {
           activeClassName="active"
           to="/favorites">Favorites
         </Link>
-        <p>{this.state.joke}</p>
+        <p>list</p>
       </div>
     );
   }
