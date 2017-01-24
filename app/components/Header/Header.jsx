@@ -1,21 +1,21 @@
 /*jshint esversion: 6 */
 
 import React from 'react';
+import { IndexLink } from 'react-router';
 import './header-style';
+import { SettingsBtn } from '../SettingsBtn/SettingsBtn';
 
-import Button from '../Button/Button';
-
-const logStuff = () => {
-  console.log("clicked!");
-};
-
-const Header = () => {
+export const Header = (props) => {
   return (
     <div className="Header">
-      <h1>Header</h1>
-      <Button handleClick={() => logStuff()} />
+      <h1>
+        <IndexLink
+          id="headerLink"
+          activeClassName="active"
+          to="/">Chuck Norris Joke Machine
+        </IndexLink>
+      </h1>
+      <SettingsBtn/>
     </div>
   );
 }
-
-export default Header;

@@ -1,9 +1,16 @@
 @import 'header-variables';
 
 .Header {
-  background-color: $text-color;
+  background-color: $background;
+  text-align: center;
+  height: 100px;
 }
 
 h1 {
-  color: $hot;
+  font-size: 25px;
+}
+
+#headerLink {
+  color: $text;
+  text-decoration: none;
 }
