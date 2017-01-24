@@ -3,7 +3,7 @@
 import React from 'react';
 import './header-style';
 
-import Button from '../Button/Button';
+import Settings from '../Settings/Settings';
 
 const logStuff = () => {
   console.log("clicked!");
@@ -12,8 +12,8 @@ const logStuff = () => {
 const Header = () => {
   return (
     <div className="Header">
-      <h1>Header</h1>
-      <Button handleClick={() => logStuff()} />
+      <h1>Chuck Norris Joke Machine</h1>
+      <Settings handleClick={() => logStuff()} />
     </div>
   );
 }

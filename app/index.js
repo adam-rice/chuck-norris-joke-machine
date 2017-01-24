@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { render } from 'react-dom';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import './reset';
 import './styles';
 import Header from './components/Header/Header';
