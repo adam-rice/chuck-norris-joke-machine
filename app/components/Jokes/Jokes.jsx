@@ -69,3 +69,7 @@ export default class Jokes extends Component {
     );
   }
 }
+
+Jokes.propTypes = {
+  jokes: React.PropTypes.array
+};
