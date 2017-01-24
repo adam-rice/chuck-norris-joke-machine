@@ -17,25 +17,26 @@ export default class Jokes extends Component {
   onFormSubmit(e) {
     e.preventDefault();
 
-    // this.setState({isLoading: true});
+    this.setState({isLoading: true});
 
     chuckData.getJoke().then(function(response) {
       console.log(response.data.value.joke);
+    //   let newJoke = response.data.value.joke;
+    //
+    //   this.setState({
+    //     joke: newJoke
+    //   });
+    // }, function (errorMessage) {
+    //   this.setState({isLoading: false});
+    //   alert(errorMessage);
     });
-  //     this.setState({
-  //       joke: response.data.value.joke
-  //     });
-  //   },function (errorMessage) {
-  //     this.setState({isLoading: false});
-  //     alert(errorMessage);
-  //   });
   }
 
   render() {
     return (
       <div>
         <p>Some default joke</p>
-        <form onSubmit={this.onFormSubmit}>
+        <form onSubmit={this.onFormSubmit.bind(this)}>
           <button>Get Jokes</button>
           <input
             ref="count"
