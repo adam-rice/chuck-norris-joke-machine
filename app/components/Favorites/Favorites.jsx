@@ -14,7 +14,7 @@ export default class Favorites extends Component {
   render() {
     return (
       <div>
-        <h3>Favorites go here</h3>
+        <p>Favorites go here</p>
       </div>
     );
   }

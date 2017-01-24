@@ -17,7 +17,7 @@ export default class Jokes extends Component {
       <div>
         <p>Some default joke</p>
         <form>
-          <button>New Jokes</button>
+          <button>Get Jokes</button>
           <input
             ref="count"
             type="number"
@@ -29,6 +29,7 @@ export default class Jokes extends Component {
           activeClassName="active"
           to="/favorites">Favorites
         </Link>
+        <p>CLICK GET JOKES!</p>
       </div>
     );
   }
