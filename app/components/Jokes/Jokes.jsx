@@ -1,12 +1,13 @@
 /*jshint esversion: 6 */
 
 import React,{ Component } from 'react';
+import './jokes-style';
 
 export default class Jokes extends Component {
   constructor() {
   super();
     this.state = {
-      dance: false
+      hippo: false
     };
   }
 

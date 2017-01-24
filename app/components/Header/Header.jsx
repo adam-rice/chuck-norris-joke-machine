@@ -2,14 +2,8 @@
 
 import React from 'react';
 import { IndexLink } from 'react-router';
-
 import './header-style';
-
-import SettingsBtn from '../SettingsBtn/SettingsBtn';
-
-const logStuff = () => {
-  console.log("clicked!");
-};
+import { SettingsBtn } from '../SettingsBtn/SettingsBtn';
 
 export const Header = (props) => {
   return (
@@ -21,7 +15,7 @@ export const Header = (props) => {
           to="/">Chuck Norris Joke Machine
         </IndexLink>
       </h1>
-      <SettingsBtn handleClick={() => logStuff()} />
+      <SettingsBtn/>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 
 import React,{ Component } from 'react';
+import './favorites-style';
 
 export default class Favorites extends Component {
   constructor() {
