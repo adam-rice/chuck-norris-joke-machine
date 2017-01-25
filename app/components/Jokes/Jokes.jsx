@@ -13,6 +13,10 @@ export default class Jokes extends Component {
     };
   }
 
+  componentDidMount() {
+    console.log(this.props);
+  }
+
   onFormSubmit(e) {
     e.preventDefault();
     const count = this.refs.count.value;
@@ -52,7 +56,7 @@ export default class Jokes extends Component {
         <div id="joke-list">
           {jokes.map((card) =>
           <div key={card.id}>
-            <Joke {...card} />
+            <Joke {...card} addFavorite={this.props.addFavorite}/>
           </div>)}
         </div>
       )

@@ -15,7 +15,7 @@ export const Header = (props) => {
           to="/">Chuck Norris Joke Machine
         </IndexLink>
       </h1>
-      <SettingsBtn/>
+        <SettingsBtn/>
     </div>
   );
 }

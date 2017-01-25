@@ -7,7 +7,7 @@ import './settingsbtn-style';
 export const SettingsBtn = (props) => {
   return (
       <Link
-        id="settingsBtn"
+        id="settings-button"
         to="/settings">Settings
       </Link>
   );

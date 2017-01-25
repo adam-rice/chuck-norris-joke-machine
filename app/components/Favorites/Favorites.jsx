@@ -2,20 +2,23 @@
 
 import React,{ Component } from 'react';
 import './favorites-style';
+import { Joke } from '../Joke/Joke';
 
-export default class Favorites extends Component {
-  constructor() {
-  super();
-    this.state = {
-      walrus: false
-    };
-  }
+export const Favorites = ({ starredJokes, addFavorite }) => {
+  console.log(starredJokes);
 
-  render() {
+  if(starredJokes.length < 1) {
     return (
-      <div>
-        <p>Favorites go here</p>
-      </div>
+      <p id="joke-status">You have not favorited any jokes.</p>
     );
+  } else {
+    return (
+      <div id="favorite-list">
+        {starredJokes.map((card) =>
+        <div key={card.id}>
+          <Joke {...card} addFavorite={addFavorite}/>
+        </div>)}
+      </div>
+    )
   }
-}
+};

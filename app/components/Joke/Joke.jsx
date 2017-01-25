@@ -4,7 +4,7 @@ import React from 'react';
 import './joke-style';
 
 export const Joke = (props) => {
-  const { joke } = props;
+  const { joke, id, addFavorite } = props;
   return(
     <div className="joke-card">
       <article>
@@ -12,6 +12,9 @@ export const Joke = (props) => {
         <label>
           <input
             type="checkbox"
+            className="favorite-btn"
+            // onChange={() => console.log(joke, id)}
+            onChange={addFavorite(joke, id)}
           />
         </label>
       </article>
