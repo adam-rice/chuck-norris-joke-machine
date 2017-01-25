@@ -39,6 +39,17 @@ export default class Main extends Component {
     );
   }
 
+  updateParentalControls() {
+    if(this.state.parentalControlsDisabled) {
+      this.setState({
+        parentalControlsDisabled: false
+      });
+    } else this.setState({
+      parentalControlsDisabled: true
+    });
+    console.log(this.state);
+  }
+
   render() {
     return (
       <div id="body">
@@ -47,6 +58,7 @@ export default class Main extends Component {
           displayJoke: this.state.displayJoke,
           starredJokes: this.state.starredJokes,
           addFavorite: this.addFavorite.bind(this),
+          updateParentalControls: this.updateParentalControls.bind(this),
           parentalControlsDisabled: this.state.parentalControlsDisabled
         })}
       </div>

@@ -21,14 +21,14 @@ export const Settings = (props) => {
               On:
               <input id="pc-on" type='radio'
                 checked={checkParentalControls(props.parentalControlsDisabled)}
-                onChange={() => console.log('wow')}
+                onChange={() => props.updateParentalControls()}
               />
             </label>
             <label>
               Off:
               <input id="pc-off" type='radio'
                 checked={props.parentalControlsDisabled}
-                onChange={() => console.log('NOOO')}
+                onChange={() => props.updateParentalControls()}
               />
             </label>
           </form>
