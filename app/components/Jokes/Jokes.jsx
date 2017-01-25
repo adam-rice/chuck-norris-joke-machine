@@ -61,6 +61,7 @@ export default class Jokes extends Component {
 
   render() {
     const { jokes } = this.state;
+    
     return (
       <div id="jokes">
         <p id="display-joke">{this.props.displayJoke}</p>

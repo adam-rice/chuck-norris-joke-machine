@@ -17,6 +17,7 @@ export default class Main extends Component {
 
   componentDidMount() {
     const chuckData = 'http://api.icndb.com/jokes/random/1?escape=javascript';
+
     fetch(chuckData).then((response) => {
       return response.json();
     }).then((data) => {
@@ -28,13 +29,14 @@ export default class Main extends Component {
 
   addFavorite(text, id) {
     const { starredJokes } = this.state;
+    
     starredJokes.push(
       {
         joke: text,
-        id: id
+        id: id,
+        favorite: true
       }
     );
-    console.log(this.state);
   }
 
   render() {
