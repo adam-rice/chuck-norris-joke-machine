@@ -5,8 +5,6 @@ import './favorites-style';
 import { Joke } from '../Joke/Joke';
 
 export const Favorites = ({ starredJokes, addFavorite }) => {
-  console.log(starredJokes);
-
   if(starredJokes.length < 1) {
     return (
       <p id="joke-status">You have not favorited any jokes.</p>
@@ -16,7 +14,11 @@ export const Favorites = ({ starredJokes, addFavorite }) => {
       <div id="favorite-list">
         {starredJokes.map((card) =>
         <div key={card.id}>
-          <Joke {...card} addFavorite={addFavorite}/>
+          <Joke
+            {...card}
+            addFavorite={addFavorite}
+            favorite={card.favorite}
+          />
         </div>)}
       </div>
     )
