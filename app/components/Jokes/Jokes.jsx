@@ -13,9 +13,9 @@ export default class Jokes extends Component {
     };
   }
 
-  componentDidMount() {
-    console.log(this.props);
-  }
+  // componentDidMount() {
+  //   console.log(this.props);
+  // }
 
   onFormSubmit(e) {
     e.preventDefault();
@@ -54,8 +54,8 @@ export default class Jokes extends Component {
     } else {
       return (
         <div id="joke-list">
-          {jokes.map((card) =>
-          <div key={card.id}>
+          {jokes.map((card, i) =>
+          <div key={i}>
             <Joke {...card} addFavorite={this.props.addFavorite}/>
           </div>)}
         </div>

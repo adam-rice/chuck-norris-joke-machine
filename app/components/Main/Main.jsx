@@ -27,7 +27,6 @@ export default class Main extends Component {
   }
 
   addFavorite(text, id) {
-    console.log(this.state);
     const { starredJokes } = this.state;
     starredJokes.push(
       {
@@ -35,6 +34,7 @@ export default class Main extends Component {
         id: id
       }
     );
+    console.log(this.state);
   }
 
   render() {

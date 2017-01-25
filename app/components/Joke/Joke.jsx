@@ -13,8 +13,7 @@ export const Joke = (props) => {
           <input
             type="checkbox"
             className="favorite-btn"
-            // onChange={() => console.log(joke, id)}
-            onChange={addFavorite(joke, id)}
+            onChange={() => addFavorite(joke, id)}
           />
         </label>
       </article>
