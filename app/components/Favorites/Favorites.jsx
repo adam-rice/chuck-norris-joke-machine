@@ -5,7 +5,11 @@ import './favorites-style';
 import { Joke } from '../Joke/Joke';
 
 export const Favorites = ({ starredJokes, addFavorite }) => {
-  console.log(starredJokes);
+  // console.log(starredJokes);
+  //
+  // return (
+  //   <p>OOOOOOOOO</p>
+  // );
 
   if(starredJokes.length < 1) {
     return (

@@ -13,10 +13,6 @@ export default class Jokes extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   console.log(this.props);
-  // }
-
   onFormSubmit(e) {
     e.preventDefault();
     const count = this.refs.count.value;
@@ -78,7 +74,6 @@ export default class Jokes extends Component {
         </form>
         <Link
           id="favoritesBtn"
-          activeClassName="active"
           to="/favorites">Favorites
         </Link>
         <div>
@@ -90,5 +85,5 @@ export default class Jokes extends Component {
 }
 
 Jokes.propTypes = {
-  jokes: React.PropTypes.array
+  starredJokes: React.PropTypes.array
 };

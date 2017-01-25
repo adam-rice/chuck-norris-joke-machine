@@ -3,3 +3,10 @@
   color: #7a8f98;
   font-size: 25px;
 }
+
+#favorite-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
