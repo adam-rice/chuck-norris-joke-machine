@@ -13,6 +13,14 @@ export default class Jokes extends Component {
     };
   }
 
+  componentDidMount() {
+    fetch('http://api.icndb.com/jokes/random/40?escape=javascript&firstName=John&lastName=Doe&exclude=[explicit]').then((response) => {
+      return response.json();
+    }).then((data) => {
+      console.log(data);
+    });
+  }
+
   onFormSubmit(e) {
     e.preventDefault();
     const count = this.refs.count.value;
