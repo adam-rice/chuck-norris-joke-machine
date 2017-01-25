@@ -1,5 +1,22 @@
-#settingsBtn {
+#settings-button {
   background-color: lightgrey;
-  text-decoration: none;
+  border-radius: 50%;
   color: black;
+  line-height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 555px) {
+  #settings-button {
+    font-size: 12px;
+    line-height: 50px;
+    width: 50px;
+    top: 12px;
+    right: 12px;
+  }
 }

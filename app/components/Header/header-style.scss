@@ -1,11 +1,12 @@
 @import 'header-variables';
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
 
-
 .Header {
   background-color: $background;
-  text-align: center;
-  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
 }
 
 h1 {
@@ -16,4 +17,25 @@ h1 {
 #headerLink {
   color: $text;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1115px) {
+  h1 {
+    font-size: 40px;
+    width: 500px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .Header {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  h1 {
+    font-size: 30px;
+    width: 300px;
+    margin-bottom: 12px;
+  }
 }
