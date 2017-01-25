@@ -12,6 +12,7 @@ export const Joke = (props) => {
         <label>
           <input
             type="checkbox"
+            className="favorite-btn"
           />
         </label>
       </article>
