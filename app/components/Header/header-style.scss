@@ -1,4 +1,6 @@
 @import 'header-variables';
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
 
 .Header {
   background-color: $background;
@@ -7,7 +9,8 @@
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 50px;
+  font-family: 'Bungee Shade', cursive;
 }
 
 #headerLink {
