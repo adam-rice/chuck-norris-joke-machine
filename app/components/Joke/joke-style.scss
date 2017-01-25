@@ -3,5 +3,10 @@
 }
 
 article {
-  border: 1px dotted white;
+  min-width: 280px;
+  max-width: 400px;
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  font-family: sans-serif;
+  padding: 10px;
 }

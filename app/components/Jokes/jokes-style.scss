@@ -65,10 +65,13 @@ input {
 
 #instructions {
   color: #7a8f98;
-  font-size: 40px;
+  font-size: 35px;
   margin: 60px;
 }
 
 #joke-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
   margin: 20px;
 }
