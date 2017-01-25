@@ -26,13 +26,25 @@ export default class Main extends Component {
     });
   }
 
+  addFavorite(text, id) {
+    console.log(this.state);
+    const { starredJokes } = this.state;
+    starredJokes.push(
+      {
+        joke: text,
+        id: id
+      }
+    );
+  }
+
   render() {
     return (
       <div id="body">
         <Header/>
         {React.cloneElement(this.props.children, {
           displayJoke: this.state.displayJoke,
-          starredJokes: this.state.starredJokes
+          starredJokes: this.state.starredJokes,
+          addFavorite: this.addFavorite.bind(this)
         })}
       </div>
     );

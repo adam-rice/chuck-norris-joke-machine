@@ -4,7 +4,7 @@ import React,{ Component } from 'react';
 import './favorites-style';
 import { Joke } from '../Joke/Joke';
 
-export const Favorites = ({ starredJokes }) => {
+export const Favorites = ({ starredJokes, addFavorite }) => {
   console.log(starredJokes);
 
   if(starredJokes.length < 1) {
@@ -16,7 +16,7 @@ export const Favorites = ({ starredJokes }) => {
       <div id="favorite-list">
         {starredJokes.map((card) =>
         <div key={card.id}>
-          <Joke {...card} />
+          <Joke {...card} addFavorite={addFavorite}/>
         </div>)}
       </div>
     )
