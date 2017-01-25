@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import './reset';
 import Main from './components/Main/Main';
-import { Settings } from './components/Settings/Settings';
+import Settings from './components/Settings/Settings';
 import { Favorites } from './components/Favorites/Favorites';
 import Jokes from './components/Jokes/Jokes';
 

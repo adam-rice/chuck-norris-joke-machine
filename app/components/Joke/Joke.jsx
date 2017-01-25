@@ -31,3 +31,10 @@ export const Joke = (props) => {
     )
   }
 };
+
+Joke.propTypes = {
+  joke:         React.PropTypes.string,
+  id:           React.PropTypes.number,
+  addFavorite:  React.PropTypes.func,
+  // favorite:     React.PropTypes.boolean
+};

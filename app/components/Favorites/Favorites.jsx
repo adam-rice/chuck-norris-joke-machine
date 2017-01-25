@@ -24,3 +24,8 @@ export const Favorites = ({ starredJokes, addFavorite }) => {
     )
   }
 };
+
+Favorites.propTypes = {
+  starredJokes: React.PropTypes.array,
+  addFavorite:  React.PropTypes.func
+};

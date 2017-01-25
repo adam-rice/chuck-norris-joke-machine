@@ -13,6 +13,14 @@ export default class Jokes extends Component {
     };
   }
 
+  componentDidMount() {
+    fetch('http://api.icndb.com/jokes/random/40?escape=javascript&firstName=John&lastName=Doe&exclude=[explicit]').then((response) => {
+      return response.json();
+    }).then((data) => {
+      console.log(data);
+    });
+  }
+
   onFormSubmit(e) {
     e.preventDefault();
     const count = this.refs.count.value;
@@ -61,7 +69,7 @@ export default class Jokes extends Component {
 
   render() {
     const { jokes } = this.state;
-    
+
     return (
       <div id="jokes">
         <p id="display-joke">{this.props.displayJoke}</p>
@@ -86,5 +94,6 @@ export default class Jokes extends Component {
 }
 
 Jokes.propTypes = {
-  starredJokes: React.PropTypes.array
+  addFavorite:    React.PropTypes.func,
+  displayJoke:    React.PropTypes.string
 };

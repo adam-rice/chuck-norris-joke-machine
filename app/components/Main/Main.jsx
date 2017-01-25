@@ -10,8 +10,8 @@ export default class Main extends Component {
     this.state = {
       displayJoke: null,
       starredJokes: [],
-      parentalControls: false,
-      setName: null
+      parentalControlsDisabled: true,
+      name: null
     };
   }
 
@@ -29,7 +29,7 @@ export default class Main extends Component {
 
   addFavorite(text, id) {
     const { starredJokes } = this.state;
-    
+
     starredJokes.push(
       {
         joke: text,
@@ -39,6 +39,22 @@ export default class Main extends Component {
     );
   }
 
+  updateParentalControls() {
+    if(this.state.parentalControlsDisabled === true) {
+      this.setState({
+        parentalControlsDisabled: false
+      });
+    } else this.setState({
+      parentalControlsDisabled: true
+    });
+  }
+
+  updateName(name) {
+    this.setState({
+      name: name
+    });
+  }
+
   render() {
     return (
       <div id="body">
@@ -46,7 +62,10 @@ export default class Main extends Component {
         {React.cloneElement(this.props.children, {
           displayJoke: this.state.displayJoke,
           starredJokes: this.state.starredJokes,
-          addFavorite: this.addFavorite.bind(this)
+          addFavorite: this.addFavorite.bind(this),
+          updateParentalControls: this.updateParentalControls.bind(this),
+          updateName: this.updateName.bind(this),
+          parentalControlsDisabled: this.state.parentalControlsDisabled
         })}
       </div>
     );
