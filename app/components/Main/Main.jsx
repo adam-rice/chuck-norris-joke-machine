@@ -11,7 +11,7 @@ export default class Main extends Component {
       displayJoke: null,
       starredJokes: [],
       parentalControlsDisabled: true,
-      setName: null
+      name: null
     };
   }
 
@@ -47,7 +47,12 @@ export default class Main extends Component {
     } else this.setState({
       parentalControlsDisabled: true
     });
-    console.log(this.state);
+  }
+
+  updateName(name) {
+    this.setState({
+      name: name
+    });
   }
 
   render() {
@@ -59,6 +64,7 @@ export default class Main extends Component {
           starredJokes: this.state.starredJokes,
           addFavorite: this.addFavorite.bind(this),
           updateParentalControls: this.updateParentalControls.bind(this),
+          updateName: this.updateName.bind(this),
           parentalControlsDisabled: this.state.parentalControlsDisabled
         })}
       </div>
