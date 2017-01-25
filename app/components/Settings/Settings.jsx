@@ -11,19 +11,35 @@ export const Settings = (props) => {
         <div id='set-name-controls'>
           <p>Set Name:</p>
           <input id='name-input'/>
-          <button id='set-name-btn'>Set</button>
+          <button id='set-name-btn'>SET</button>
           <button id='reset-btn'>RESET</button>
         </div>
         <div id='parental-controls'>
           <p>Parental Controls: </p>
-          <label>
-            <input type='radio'/>
-          </label>
-          <label>
-            <input type='radio'/>
-          </label>
+          <form>
+            <label>
+              On:
+              <input id="pc-on" type='radio'
+                checked={checkParentalControls(props.parentalControlsDisabled)}
+                onChange={() => console.log('wow')}
+              />
+            </label>
+            <label>
+              Off:
+              <input id="pc-off" type='radio'
+                checked={props.parentalControlsDisabled}
+                onChange={() => console.log('NOOO')}
+              />
+            </label>
+          </form>
         </div>
       </div>
     </div>
   );
+}
+
+const checkParentalControls = (b) => {
+  if(b) {
+    return false
+  } else return true
 }
