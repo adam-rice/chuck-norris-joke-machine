@@ -72,3 +72,10 @@ const checkParentalControls = (b) => {
     return false
   } else return true
 }
+
+Jokes.propTypes = {
+  displayJoke:              React.PropTypes.string,
+  parentalControlsDisabled: React.PropTypes.boolean,
+  updateParentalControls:   React.PropTypes.func,
+  updateName:               React.PropTypes.func
+};

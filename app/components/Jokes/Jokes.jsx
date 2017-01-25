@@ -61,7 +61,7 @@ export default class Jokes extends Component {
 
   render() {
     const { jokes } = this.state;
-    
+
     return (
       <div id="jokes">
         <p id="display-joke">{this.props.displayJoke}</p>
@@ -86,5 +86,6 @@ export default class Jokes extends Component {
 }
 
 Jokes.propTypes = {
-  starredJokes: React.PropTypes.array
+  addFavorite:    React.PropTypes.func,
+  displayJoke:    React.PropTypes.string
 };
