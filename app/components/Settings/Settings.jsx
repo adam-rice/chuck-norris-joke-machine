@@ -34,7 +34,6 @@ export default class Settings  extends Component {
               <input
                 id='name-input'
                 ref='name'
-                placeholder='Chuck Norris'
               />
               <button id='set-name-btn'>SET</button>
               <button
