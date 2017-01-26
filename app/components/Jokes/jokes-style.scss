@@ -4,9 +4,9 @@
 
 #display-joke {
   border: 1px dotted white;
+  margin: 10px auto;
   padding: 20px;
   width: 80%;
-  margin: 10px auto;
 }
 
 form, button {
@@ -15,8 +15,8 @@ form, button {
 
 form {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 p {

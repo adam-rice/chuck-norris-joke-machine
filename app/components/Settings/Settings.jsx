@@ -30,7 +30,9 @@ export default class Settings  extends Component {
         <div id='settings-container'>
           <div id='set-name-controls'>
             <p>Set Name:</p>
-            <form onSubmit={this.handleSubmit.bind(this)}>
+            <form
+              onSubmit={this.handleSubmit.bind(this)}
+              autoComplete='off'>
               <input
                 id='name-input'
                 ref='name'
