@@ -22,7 +22,7 @@ export default class Settings  extends Component {
   }
 
   render() {
-    const { displayJoke, parentalControlsDisabled, updateParentalControls } = this.props;
+    const { displayJoke, parentalControlsDisabled, updateParentalControls, name } = this.props;
 
     return (
       <div>
@@ -36,6 +36,7 @@ export default class Settings  extends Component {
               <input
                 id='name-input'
                 ref='name'
+                placeholder={name}
               />
               <button id='set-name-btn'>SET</button>
               <button
@@ -76,8 +77,9 @@ const checkParentalControls = (b) => {
 }
 
 Settings.propTypes = {
-  parentalControlsDisabled: React.PropTypes.bool,
+  name:                     React.PropTypes.string,
   displayJoke:              React.PropTypes.string,
+  parentalControlsDisabled: React.PropTypes.bool,
   updateParentalControls:   React.PropTypes.func,
-  updateName:               React.PropTypes.func
+  updateName:               React.PropTypes.func,
 };
