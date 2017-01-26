@@ -17,16 +17,29 @@ export default class Jokes extends Component {
     fetch('http://api.icndb.com/jokes/random/40?escape=javascript&firstName=John&lastName=Doe&exclude=[explicit]').then((response) => {
       return response.json();
     }).then((data) => {
-      console.log(data);
+      // console.log(data);
     });
+  }
+
+  splitName() {
+    const { name } = this.props;
+    if (name === null) {
+      return ["Chuck", "Norris"];
+    } else {
+      const a = name.split(" ");
+      return a;
+    }
   }
 
   onFormSubmit(e) {
     e.preventDefault();
     const count = this.refs.count.value;
+    const nameArray = this.splitName();
+    const firstName = nameArray[0];
+    const lastName = nameArray[1];
     const defaultChuckData =
-    'http://api.icndb.com/jokes/random/5?escape=javascript';
-    const definedChuckData = `http://api.icndb.com/jokes/random/${count}?escape=javasript`;
+    `http://api.icndb.com/jokes/random/5?escape=javascript&firstName=${firstName}&lastName=${lastName}`;
+    const definedChuckData = `http://api.icndb.com/jokes/random/${count}?escape=javasript&firstName=${firstName}&lastName=${lastName}`;
 
     if(count === '') {
       fetch(defaultChuckData).then((response) => {

@@ -16,6 +16,7 @@ export default class Main extends Component {
   }
 
   componentDidMount() {
+
     const chuckData = 'http://api.icndb.com/jokes/random/1?escape=javascript';
 
     fetch(chuckData).then((response) => {
@@ -51,7 +52,7 @@ export default class Main extends Component {
 
   updateName(name) {
     this.setState({
-      name: name
+      name
     });
   }
 
@@ -60,11 +61,12 @@ export default class Main extends Component {
       <div id="body">
         <Header/>
         {React.cloneElement(this.props.children, {
-          displayJoke: this.state.displayJoke,
-          starredJokes: this.state.starredJokes,
-          addFavorite: this.addFavorite.bind(this),
-          updateParentalControls: this.updateParentalControls.bind(this),
-          updateName: this.updateName.bind(this),
+          displayJoke:              this.state.displayJoke,
+          starredJokes:             this.state.starredJokes,
+          name:                     this.state.name,
+          addFavorite:              this.addFavorite.bind(this),
+          updateParentalControls:   this.updateParentalControls.bind(this),
+          updateName:               this.updateName.bind(this),
           parentalControlsDisabled: this.state.parentalControlsDisabled
         })}
       </div>
