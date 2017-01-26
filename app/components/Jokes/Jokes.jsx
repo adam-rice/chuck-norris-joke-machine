@@ -12,7 +12,7 @@ export default class Jokes extends Component {
       jokes: []
     };
   }
-  
+
   splitName() {
     const { name } = this.props;
     if (name === null) {
@@ -40,8 +40,6 @@ export default class Jokes extends Component {
     const defaultChuckData =
     `http://api.icndb.com/jokes/random/5?escape=javascript&firstName=${firstName}&lastName=${lastName}&exclude=${filter}`;
     const definedChuckData = `http://api.icndb.com/jokes/random/${count}?escape=javasript&firstName=${firstName}&lastName=${lastName}&exclude=${filter}`;
-
-    console.log(definedChuckData);
 
     if(count === '') {
       fetch(defaultChuckData).then((response) => {

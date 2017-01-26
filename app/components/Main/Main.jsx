@@ -16,7 +16,6 @@ export default class Main extends Component {
   }
 
   componentDidMount() {
-
     const chuckData = 'http://api.icndb.com/jokes/random/1?escape=javascript';
 
     fetch(chuckData).then((response) => {
