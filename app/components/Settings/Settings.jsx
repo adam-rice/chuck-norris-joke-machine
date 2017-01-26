@@ -77,8 +77,9 @@ const checkParentalControls = (b) => {
 }
 
 Settings.propTypes = {
-  parentalControlsDisabled: React.PropTypes.bool,
+  name:                     React.PropTypes.string,
   displayJoke:              React.PropTypes.string,
+  parentalControlsDisabled: React.PropTypes.bool,
   updateParentalControls:   React.PropTypes.func,
-  updateName:               React.PropTypes.func
+  updateName:               React.PropTypes.func,
 };
