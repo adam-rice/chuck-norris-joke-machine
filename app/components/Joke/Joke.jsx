@@ -36,5 +36,5 @@ Joke.propTypes = {
   joke:         React.PropTypes.string,
   id:           React.PropTypes.number,
   addFavorite:  React.PropTypes.func,
-  // favorite:     React.PropTypes.boolean
+  favorite:     React.PropTypes.bool
 };
