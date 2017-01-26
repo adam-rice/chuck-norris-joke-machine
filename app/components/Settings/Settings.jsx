@@ -38,8 +38,8 @@ export default class Settings  extends Component {
               <button id='set-name-btn'>SET</button>
               <button
                 id='reset-btn'
-                onClick={this.clearInput.bind(this)}
-                >RESET</button>
+                onClick={this.clearInput.bind(this)}>RESET
+              </button>
             </form>
           </div>
           <div id='parental-controls'>
