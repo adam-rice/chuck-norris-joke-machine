@@ -12,15 +12,7 @@ export default class Jokes extends Component {
       jokes: []
     };
   }
-
-  componentDidMount() {
-    fetch('http://api.icndb.com/jokes/random/40?escape=javascript&firstName=John&lastName=Doe&exclude=[explicit]').then((response) => {
-      return response.json();
-    }).then((data) => {
-      // console.log(data);
-    });
-  }
-
+  
   splitName() {
     const { name } = this.props;
     if (name === null) {
@@ -31,15 +23,25 @@ export default class Jokes extends Component {
     }
   }
 
+  setFilter() {
+    const { parentalControlsDisabled } = this.props;
+    if(parentalControlsDisabled) {
+      return '[]';
+    } else return '[explicit]';
+  }
+
   onFormSubmit(e) {
     e.preventDefault();
     const count = this.refs.count.value;
     const nameArray = this.splitName();
     const firstName = nameArray[0];
     const lastName = nameArray[1];
+    const filter = this.setFilter();
     const defaultChuckData =
-    `http://api.icndb.com/jokes/random/5?escape=javascript&firstName=${firstName}&lastName=${lastName}`;
-    const definedChuckData = `http://api.icndb.com/jokes/random/${count}?escape=javasript&firstName=${firstName}&lastName=${lastName}`;
+    `http://api.icndb.com/jokes/random/5?escape=javascript&firstName=${firstName}&lastName=${lastName}&exclude=${filter}`;
+    const definedChuckData = `http://api.icndb.com/jokes/random/${count}?escape=javasript&firstName=${firstName}&lastName=${lastName}&exclude=${filter}`;
+
+    console.log(definedChuckData);
 
     if(count === '') {
       fetch(defaultChuckData).then((response) => {
