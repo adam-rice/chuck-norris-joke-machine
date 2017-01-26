@@ -63,9 +63,9 @@ export default class Main extends Component {
           displayJoke:              this.state.displayJoke,
           starredJokes:             this.state.starredJokes,
           name:                     this.state.name,
+          updateName:               this.updateName.bind(this),
           addFavorite:              this.addFavorite.bind(this),
           updateParentalControls:   this.updateParentalControls.bind(this),
-          updateName:               this.updateName.bind(this),
           parentalControlsDisabled: this.state.parentalControlsDisabled
         })}
       </div>
