@@ -2,6 +2,7 @@
 
 import React,{ Component } from 'react';
 import './settings-style';
+import { toggleBool } from './helper';
 
 export default class Settings  extends Component {
   handleSubmit(e) {
@@ -51,7 +52,7 @@ export default class Settings  extends Component {
               <label>
                 On:
                 <input type='radio'
-                  checked={checkParentalControls(parentalControlsDisabled)}
+                  checked={toggleBool(parentalControlsDisabled)}
                   onChange={() => updateParentalControls()}
                 />
               </label>
@@ -68,12 +69,6 @@ export default class Settings  extends Component {
       </div>
     );
   }
-}
-
-const checkParentalControls = (bool) => {
-  if(bool) {
-    return false
-  } else return true
 }
 
 Settings.propTypes = {
