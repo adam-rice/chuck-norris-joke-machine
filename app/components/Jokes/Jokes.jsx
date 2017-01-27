@@ -72,7 +72,7 @@ export default class Jokes extends Component {
       return (
         <div id="joke-list">
           {jokes.map((card, i) =>
-          <div key={i}>
+          <div key={card.id}>
             <Joke {...card} addFavorite={this.props.addFavorite}/>
           </div>)}
         </div>
