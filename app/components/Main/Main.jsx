@@ -77,9 +77,9 @@ export default class Main extends Component {
           leaveHomepage={this.leaveHomepage.bind(this)}
         />
         {React.cloneElement(this.props.children, {
+          name:                     this.state.name,
           displayJoke:              this.state.displayJoke,
           starredJokes:             this.state.starredJokes,
-          name:                     this.state.name,
           toHomepage:               this.toHomepage.bind(this),
           updateName:               this.updateName.bind(this),
           addFavorite:              this.addFavorite.bind(this),
