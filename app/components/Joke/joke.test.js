@@ -23,9 +23,11 @@ describe('<Joke/>', () => {
     const wrapper = shallow(<Joke/>);
     expect(wrapper.state().favorite).to.equal(false);
   });
+  
 
   it('should change the state of favorite when user clicks the star', () => {
     const wrapper = mount(<Joke addFavorite={()=>console.log('** I love react **')}/>);
+
     wrapper.find('button').simulate('click');
     expect(wrapper.state('favorite')).to.equal(true);
   });

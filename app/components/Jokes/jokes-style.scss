@@ -3,7 +3,7 @@
 }
 
 #display-joke {
-  border: 1px dotted white;
+  border: 1px dotted #FFFFFF;
   border-radius: 5px;
   margin: 10px auto;
   padding: 20px;
@@ -21,7 +21,7 @@ form {
 }
 
 p {
-  color: white;
+  color: #FFFFFF;
 }
 
 input::-webkit-outer-spin-button,
@@ -32,7 +32,7 @@ input::-webkit-inner-spin-button {
 }
 
 input {
-  border: 1px solid white;
+  border: 1px solid #FFFFFF;
   border-radius: 5px;
   font-size: 18px;
   width: 30px;
