@@ -54,7 +54,7 @@ export default class Main extends Component {
   }
 
   updateParentalControls() {
-    if(this.state.parentalControlsDisabled === true) {
+    if(this.state.parentalControlsDisabled) {
       this.setState({
         parentalControlsDisabled: false
       });
