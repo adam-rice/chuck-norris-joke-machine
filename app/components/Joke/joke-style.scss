@@ -4,7 +4,7 @@
 
 article {
   background-color: rgba(0,0,0,0.2);
-  color: white;
+  color: #FFFFFF;
   font-family: sans-serif;
   min-width: 280px;
   max-width: 400px;
@@ -15,20 +15,23 @@ article {
 label {
   display: flex;
   justify-content: flex-end;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .favorite-btn {
   background-color: rgba(0,0,0,0);
   border: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 20px;
   outline: none;
   &:hover {
     cursor: pointer;
-    color: yellow;
+    color: #FFCC00;
   }
 }
 
 .favorite {
-  color: yellow;
+  color: #FFCC00;
 }
