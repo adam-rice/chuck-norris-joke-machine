@@ -53,6 +53,4 @@ describe('<Main/>', () => {
     const wrapper = mount(<Main />);
     expect(Main.prototype.componentDidMount.calledOnce).to.equal(true);
   });
-
-
 });
