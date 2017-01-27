@@ -50,14 +50,14 @@ export default class Settings  extends Component {
             <form>
               <label>
                 On:
-                <input id="pc-on" type='radio'
+                <input type='radio'
                   checked={checkParentalControls(parentalControlsDisabled)}
                   onChange={() => updateParentalControls()}
                 />
               </label>
               <label>
                 Off:
-                <input id="pc-off" type='radio'
+                <input type='radio'
                   checked={parentalControlsDisabled}
                   onChange={() => updateParentalControls()}
                 />
@@ -70,8 +70,8 @@ export default class Settings  extends Component {
   }
 }
 
-const checkParentalControls = (b) => {
-  if(b) {
+const checkParentalControls = (bool) => {
+  if(bool) {
     return false
   } else return true
 }
@@ -81,5 +81,5 @@ Settings.propTypes = {
   displayJoke:              React.PropTypes.string,
   parentalControlsDisabled: React.PropTypes.bool,
   updateParentalControls:   React.PropTypes.func,
-  updateName:               React.PropTypes.func,
+  updateName:               React.PropTypes.func
 };
