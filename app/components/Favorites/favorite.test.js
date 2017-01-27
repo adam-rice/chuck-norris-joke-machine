@@ -14,7 +14,7 @@ describe('<Favorites/>', () => {
   });
 
   it('if there are no starredJokes a p tag is rendered saying "You have not favorited any jokes."', () => {
-      const wrapper = shallow(<Favorites starredJokes={[]}/>)
-      expect(wrapper.find('p').text()).to.equal('You have not favorited any jokes.')
+      const wrapper = shallow(<Favorites starredJokes={[]}/>);
+      expect(wrapper.find('p').text()).to.equal('You have not favorited any jokes.');
     });
 });
