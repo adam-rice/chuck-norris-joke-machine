@@ -42,15 +42,13 @@ export default class Main extends Component {
 
   removeFavorite(id) {
     const { starredJokes } = this.state;
-
-    for(let i = 0; i < starredJokes.length; i++) {
-      if(starredJokes[i].id === id)
-        delete starredJokes[i];
-    }
-    this.setState({
-      starredJokes
+    const filteredStarredJokes = starredJokes.filter(function(joke) {
+      return joke.id !== id;
     });
-    console.log(starredJokes);
+
+    this.setState({
+      starredJokes: filteredStarredJokes
+    });
   }
 
   updateParentalControls() {
