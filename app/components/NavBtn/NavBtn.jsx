@@ -27,3 +27,9 @@ export const NavBtn = (props) => {
       )
   }
 }
+
+NavBtn.propTypes = {
+  homepage:       React.PropTypes.bool,
+  toHomepage:     React.PropTypes.func,
+  leaveHomepage:  React.PropTypes.func,
+};

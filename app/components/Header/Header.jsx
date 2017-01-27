@@ -25,3 +25,9 @@ export const Header = (props) => {
     </div>
   );
 }
+
+Header.propTypes = {
+  homepage:       React.PropTypes.bool,
+  toHomepage:     React.PropTypes.func,
+  leaveHomepage:  React.PropTypes.func,
+};
