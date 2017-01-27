@@ -3,7 +3,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { assert, expect } from 'chai';
-import sinon from 'sinon';
 
 import { NavBtn } from './NavBtn';
 
