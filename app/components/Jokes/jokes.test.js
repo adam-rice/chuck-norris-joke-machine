@@ -22,4 +22,19 @@ describe('<Jokes/>', () => {
     const wrapper = shallow(<Jokes/>);
     expect(wrapper.state().jokes).to.deep.equal([]);
   });
+
+  it.skip('should change the state of jokes when user clicks Get Jokes', () => {
+    const wrapper = mount(<Jokes/>);
+    const jokes = wrapper.state('jokes');
+    wrapper.find('#getJokesBtn').simulate('click');
+    expect(jokes.length).to.equal(5);
+  });
+
+  it.skip('should change the state of jokes to a specific number of jokes when user clicks Get Jokes and also inputs a number', () => {
+    const wrapper = mount(<Jokes/>);
+    const jokes = wrapper.state('jokes');
+    wrapper.find('input').simulate('change', 7);
+    wrapper.find('#getJokesBtn').simulate('click');
+    expect(jokes.length).to.equal(7);
+  });
 });
