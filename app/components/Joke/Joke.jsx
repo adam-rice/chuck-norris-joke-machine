@@ -17,7 +17,6 @@ export default class Joke extends Component {
       this.setState({
         favorite: false
       });
-      console.log(id);
       removeFavorite(id);
     } else {
       this.setState({
