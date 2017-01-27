@@ -12,11 +12,18 @@ export default class Joke extends Component {
   }
 
   handleClick() {
-    const { addFavorite, id, joke } = this.props;
-    this.setState({
-      favorite: true
-    });
-    addFavorite(joke, id);
+    const { removeFavorite, addFavorite, id, joke } = this.props;
+    if(this.state.favorite) {
+      this.setState({
+        favorite: false
+      });
+      removeFavorite(id);
+    } else {
+      this.setState({
+        favorite: true
+      });
+      addFavorite(joke, id);
+    }
   }
 
   render() {

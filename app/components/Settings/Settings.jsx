@@ -18,8 +18,8 @@ export default class Settings  extends Component {
   }
 
   clearInput() {
+    this.props.updateName('Chuck Norris');
     this.refs.name.value = '';
-    this.refs.name.focus();
   }
 
   render() {
