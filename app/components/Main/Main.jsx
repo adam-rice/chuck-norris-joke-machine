@@ -50,6 +50,7 @@ export default class Main extends Component {
     this.setState({
       starredJokes
     });
+    console.log(starredJokes);
   }
 
   updateParentalControls() {
