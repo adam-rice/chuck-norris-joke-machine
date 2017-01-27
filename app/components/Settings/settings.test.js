@@ -7,7 +7,7 @@ import sinon from 'sinon';
 
 import { toggleBool } from './helper';
 
-describe('toggleBool func', () => {
+describe('toggleBool()', () => {
   it('should be a function', () => {
     assert.isFunction(toggleBool);
   });
@@ -19,4 +19,7 @@ describe('toggleBool func', () => {
   it('wwill return the true if passed false', () => {
     expect(toggleBool(false)).to.equal(true);
     });
+});
+
+describe('<Settings/>', () => {
 });
