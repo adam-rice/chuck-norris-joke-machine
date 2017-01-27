@@ -3,7 +3,7 @@
 import React,{ Component } from 'react';
 import { Link } from 'react-router';
 import './jokes-style';
-import { Joke } from '../Joke/Joke';
+import Joke from '../Joke/Joke';
 
 export default class Jokes extends Component {
   constructor() {

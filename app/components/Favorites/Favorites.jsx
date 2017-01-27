@@ -2,7 +2,7 @@
 
 import React,{ Component } from 'react';
 import './favorites-style';
-import { Joke } from '../Joke/Joke';
+import Joke from '../Joke/Joke';
 
 export const Favorites = ({ starredJokes, addFavorite }) => {
   if(starredJokes.length < 1) {

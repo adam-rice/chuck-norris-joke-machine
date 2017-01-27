@@ -4,14 +4,34 @@
 
 article {
   background-color: rgba(0,0,0,0.2);
-  color: white;
+  color: #FFFFFF;
   font-family: sans-serif;
   min-width: 280px;
   max-width: 400px;
   padding: 8px;
+  text-align: center;
 }
 
 label {
   display: flex;
   justify-content: flex-end;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.favorite-btn {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    color: #FFCC00;
+  }
+}
+
+.favorite {
+  color: #FFCC00;
 }
