@@ -55,8 +55,9 @@ export default class Joke extends Component {
 }
 
 Joke.propTypes = {
-  joke:         React.PropTypes.string,
-  id:           React.PropTypes.number,
-  addFavorite:  React.PropTypes.func,
-  favorite:     React.PropTypes.bool
+  joke:           React.PropTypes.string,
+  id:             React.PropTypes.number,
+  favorite:       React.PropTypes.bool,
+  addFavorite:    React.PropTypes.func,
+  removeFavorite: React.PropTypes.func
 };

@@ -112,6 +112,7 @@ export default class Jokes extends Component {
 Jokes.propTypes = {
   parentalControlsDisabled: React.PropTypes.bool,
   addFavorite:              React.PropTypes.func,
+  removeFavorite:           React.PropTypes.func,
   displayJoke:              React.PropTypes.string,
   name:                     React.PropTypes.string
 };
