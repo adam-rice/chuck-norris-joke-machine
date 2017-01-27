@@ -40,6 +40,18 @@ export default class Main extends Component {
     );
   }
 
+  removeFavorite(id) {
+    const { starredJokes } = this.state;
+
+    for(let i = 0; i < starredJokes.length; i++) {
+      if(starredJokes[i].id === id)
+        delete starredJokes[i];
+    }
+    this.setState({
+      starredJokes
+    });
+  }
+
   updateParentalControls() {
     if(this.state.parentalControlsDisabled === true) {
       this.setState({
@@ -83,6 +95,7 @@ export default class Main extends Component {
           toHomepage:               this.toHomepage.bind(this),
           updateName:               this.updateName.bind(this),
           addFavorite:              this.addFavorite.bind(this),
+          removeFavorite:           this.removeFavorite.bind(this),
           leaveHomepage:            this.leaveHomepage.bind(this),
           updateParentalControls:   this.updateParentalControls.bind(this),
           parentalControlsDisabled: this.state.parentalControlsDisabled
