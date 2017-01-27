@@ -11,7 +11,8 @@ export default class Main extends Component {
       displayJoke: null,
       starredJokes: [],
       parentalControlsDisabled: true,
-      name: null
+      name: null,
+      homepage: true
     };
   }
 
@@ -55,16 +56,34 @@ export default class Main extends Component {
     });
   }
 
+  toHomepage() {
+    this.setState({
+      homepage: true
+    });
+  }
+
+  leaveHomepage() {
+    this.setState({
+      homepage: false
+    });
+  }
+
   render() {
     return (
       <div id="body">
-        <Header/>
+        <Header
+          homepage={this.state.homepage}
+          toHomepage={this.toHomepage.bind(this)}
+          leaveHomepage={this.leaveHomepage.bind(this)}
+        />
         {React.cloneElement(this.props.children, {
           displayJoke:              this.state.displayJoke,
           starredJokes:             this.state.starredJokes,
           name:                     this.state.name,
+          toHomepage:               this.toHomepage.bind(this),
           updateName:               this.updateName.bind(this),
           addFavorite:              this.addFavorite.bind(this),
+          leaveHomepage:            this.leaveHomepage.bind(this),
           updateParentalControls:   this.updateParentalControls.bind(this),
           parentalControlsDisabled: this.state.parentalControlsDisabled
         })}
