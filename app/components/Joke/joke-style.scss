@@ -9,9 +9,26 @@ article {
   min-width: 280px;
   max-width: 400px;
   padding: 8px;
+  text-align: center;
 }
 
 label {
   display: flex;
   justify-content: flex-end;
+}
+
+.favorite-btn {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color: white;
+  font-size: 20px;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    color: yellow;
+  }
+}
+
+.favorite {
+  color: yellow;
 }

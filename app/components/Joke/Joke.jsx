@@ -1,36 +1,36 @@
 /*jshint esversion: 6 */
 
-import React from 'react';
+import React, { Component } from 'react';
 import './joke-style';
 
-export const Joke = (props) => {
-  const { joke, id, addFavorite, favorite } = props;
-
-  if(favorite) {
-    return (
-      <div className="joke-card">
-        <article>
-          <p>{joke}</p>
-        </article>
-      </div>
-    )
-  } else {
-    return(
-      <div className="joke-card">
-        <article>
-          <p>{joke}</p>
-          <label>
-            <input
-              type="checkbox"
-              className="favorite-btn"
-              onChange={() => addFavorite(joke, id)}
-            />
-          </label>
-        </article>
-      </div>
-    )
+export default class Joke extends Component {
+  render() {
+    const { joke, id, addFavorite, favorite } = this.props;
+    if(favorite) {
+      return (
+        <div className="joke-card">
+          <article>
+            <p>{joke}</p>
+          </article>
+        </div>
+      )
+    } else {
+      return(
+        <div className="joke-card">
+          <article>
+            <p>{joke}</p>
+            <label>
+              <button
+                className={`favorite-btn ${favorite ? "favorite" : ""}`}
+                onClick={() => addFavorite(joke, id)}>★
+              </button>
+            </label>
+          </article>
+        </div>
+      )
+    }
   }
-};
+}
 
 Joke.propTypes = {
   joke:         React.PropTypes.string,
