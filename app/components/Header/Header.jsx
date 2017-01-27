@@ -17,11 +17,11 @@ export const Header = (props) => {
           onClick={() => toHomepage()}>Chuck Norris Joke Machine
         </IndexLink>
       </h1>
-        <NavBtn
-          homepage={homepage}
-          toHomepage={toHomepage}
-          leaveHomepage={leaveHomepage}
-        />
+      <NavBtn
+        homepage={homepage}
+        toHomepage={toHomepage}
+        leaveHomepage={leaveHomepage}
+      />
     </div>
   );
 }
