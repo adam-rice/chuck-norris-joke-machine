@@ -16,4 +16,4 @@ Built by [Adam Rice](https://github.com/adam-rice) during module three at the [T
 ![screen-grab](https://github.com/adam-rice/chuck-norris-joke-machine/blob/master/settings.png)
 
 
-<kbd><img src="https://github.com/adam-rice/chuck-norris-joke-machine/blob/master/mobile.png" width="200" height="400"></kdb>
+<kbd><img src="https://github.com/adam-rice/chuck-norris-joke-machine/blob/master/mobile.png" width="250" height="400"></kdb>
