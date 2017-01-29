@@ -17,3 +17,9 @@ Built by [Adam Rice](https://github.com/adam-rice) during module three at the [T
 
 
 <kbd><img src="https://github.com/adam-rice/chuck-norris-joke-machine/blob/master/mobile.png" width="250" height="400"></kdb>
+
+To view the app:
+- Clone this repository then cd into the chuck-norris-joke-machine directory
+- `npm install`
+- `npm start`
+- Visit the URL: http://localhost:8080
